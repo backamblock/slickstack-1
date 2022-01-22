@@ -26,5 +26,9 @@ Faster checkout time means less time to rethink the buying decision!
 
 These add bloat, yes! But when everything is cached and nginx takes the guest visitors, that doesn't really matter. In Cloudflare non-proxy mode i have a TTFB of 60-80ms without CDN, with proxy it is around 100-150ms
 
-## Other things changed:
-* none so far, placeholder
+I did not notice any conflicts with ss-config in terms of reliability. it just doubles the caching. i will share my settings in another file sometime soon.
+
+## Things changed:
+* commented wp-rocket in blacklist
+* commented imagify in blacklist
+* ...
