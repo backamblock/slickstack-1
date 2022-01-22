@@ -746,7 +746,7 @@ image-optimizer-for-google-lighthouse ;; deprecated
 image-optimizer-wd ;; resource intensive, creates database junk
 resize-image-after-upload ;; feature exists in WP Core, acquired by ShortPixel to spam (by ShortPixel)
 /image-widget/ ;; exists in wp core, not maintained
-imagify ;; generates junk files
+;; imagify ;; generates junk files
 improve-pagespeed-today ;; ss conflicts
 improved-variable-product-attributes ;; bloated, serious errors, bad practice (By XforWooCommerce)
 inactive-user-deleter ;; data loss
@@ -942,7 +942,7 @@ optimizeMember ;; requires OptimizePress (banned)
 optimizepress ;; bloated, serious errors, creates instability, potential data loss
 optimizePressPlugin ;; bloated, serious errors, creates instability, potential data loss
 optimizePress ;; bloated, serious errors, creates instability, potential data loss
-;; optimole-wp ;; excessive api calls, bloated
+optimole-wp ;; excessive api calls, bloated
 optimus ;; resource intensive, poor coding
 /options-manager/ ;; not maintained
 outtatimr ;; deprecated
@@ -1583,7 +1583,7 @@ wp-slimstat ;; exploitable, excessive logging
 /wp-smtp/ ;; blacklist risk (smtp)
 wp-smtp-config ;; not maintained
 wp-smtp-mailer ;; blacklist risk (smtp)
-;; wp-smush-pro ;; bloated
+wp-smush-pro ;; bloated
 wp-smushit ;; bloated
 wp-social-importer ;; resource intensive, copyright issues, seo penalties
 wp-social-networks-widget ;; not maintained
