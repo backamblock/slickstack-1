@@ -28,7 +28,13 @@ These add bloat, yes! But when everything is cached and nginx takes the guest vi
 
 I did not notice any conflicts with ss-config in terms of reliability. it just doubles the caching. i will share my settings in another file sometime soon.
 
-# Speed Comparison (look at First Byte, Document complete and Fully loaded)
+# Speed Comparison 
+* look at First Byte, Document complete and Fully loaded
+* you see first byte with wp-rocket is late because not much is loaded at all
+* webpagetest.org settings: Chrome, FIOS (20/5mbit) connection, 9 runs, first and repeat view, no video
+* NOT nearest server because always full. i choose Amsterdam instead of Frankfurt.
+* VPS is Hetzner 2c/2gb with AMD (current lineup 2022)
+
 * pure slickstack with Kadence theme, woocommerce and stock "Outdoor Shop" Starter site, no other changes
 ![image](https://user-images.githubusercontent.com/20801141/150625991-04a8b64b-b349-415a-81e0-cc91a7c913b2.png)
 
@@ -47,7 +53,7 @@ I did not notice any conflicts with ss-config in terms of reliability. it just d
 ![image](https://user-images.githubusercontent.com/20801141/150626076-90029c69-6604-45a2-b582-bff20c2c538e.png)
 
 
-## Things changed:
+## Things changed over original:
 * commented wp-rocket in blacklist
 * commented imagify in blacklist
 * ...
