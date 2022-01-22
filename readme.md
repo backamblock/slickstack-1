@@ -28,25 +28,25 @@ These add bloat, yes! But when everything is cached and nginx takes the guest vi
 
 I did not notice any conflicts with ss-config in terms of reliability. it just doubles the caching. i will share my settings in another file sometime soon.
 
-# Speed Comparison 
+# Speed Comparison  
 * look at First Byte, Document complete and Fully loaded
 * you see first byte with wp-rocket is late because not much is loaded at all
 * webpagetest.org settings: Chrome, FIOS (20/5mbit) connection, 9 runs, first and repeat view, no video
 * NOT nearest server because always full. i choose Amsterdam instead of Frankfurt.
 * VPS is Hetzner 2c/2gb with AMD (current lineup 2022)
-
-* pure slickstack with Kadence theme, woocommerce and stock "Outdoor Shop" Starter site, no other changes
+___
+* pure slickstack with Kadence theme, woocommerce and stock "Outdoor Shop" Starter site, no other changes  
 ![image](https://user-images.githubusercontent.com/20801141/150625991-04a8b64b-b349-415a-81e0-cc91a7c913b2.png)
 
 
-* slickstack with wp-rocket and all settings, WITHOUT imagify, WITH Cloudflare Proxymode
+* slickstack with wp-rocket and all settings, WITHOUT imagify, WITH Cloudflare Proxymode  
 ![image](https://user-images.githubusercontent.com/20801141/150626090-af03c681-82dc-4867-81b6-be4a1f4f2447.png)
 
 
-* slickstack + wp-rocket + imagify + cloudflare proxy
+* slickstack + wp-rocket + imagify + cloudflare proxy  
 
 
-* slickstack + wp-rocket + imagify + cloudflare no-proxy
+* slickstack + wp-rocket + imagify + cloudflare no-proxy  
 
 
 * comparison: maxed out litespeed enterprise + no wp-rocket, no imagify, no CDN
