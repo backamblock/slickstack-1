@@ -9,9 +9,9 @@ But it also means that some exclusions are overkill for me, i don't really care 
 Now here comes the thing. Nginx caching is nice and fast for static sites but when you put WP-Rocket on top of it, it flies!
 
 ## Let me explain:
-* Cloudflare adds Latency (TTFP) anywhere from 50-200ms 
+* Cloudflare adds Latency (TTFB) anywhere from 50-200ms 
 * CDN is not needed for only locally relevant pages like a barber or restaurant
-* The Browser-Caching of CF is better than nothing, but nowhere near good and fast
+* The Browser-Caching of CF is better than nothing, but nowhere near good
 * SlickStack has no css/js minify, Lazyload, image compression or crawler by default
 * SlickStack caching does ONLY work on static sites by design, which makes sense
 
@@ -21,8 +21,9 @@ Now here comes the thing. Nginx caching is nice and fast for static sites but wh
 * and Cache for Users with items in the cart
 * the lazy loading works as expected without layout shifts
 * combine it with imagify (free plan) for set-and-forget image compression and webp
-**and my personal #1 Reason: it works with Onlineshops!**
-Faster checkout time means less time to rethink the buying decision!
+
+**and my personal #1 Reason: it works with Onlineshops!**  
+Faster checkout time means less time to rethink the buying decision!  
 
 These add bloat, yes! But when everything is cached and nginx takes the guest visitors, that doesn't really matter. In Cloudflare non-proxy mode i have a TTFB of 60-80ms without CDN, with proxy it is around 100-150ms
 
