@@ -53,7 +53,7 @@ ____
 * comparison: maxed out litespeed enterprise + no wp-rocket, no imagify, no CDN
 ![image](https://user-images.githubusercontent.com/20801141/150626076-90029c69-6604-45a2-b582-bff20c2c538e.png)
 
-
+____
 ## Things changed over original:
 * commented wp-rocket in blacklist
 * commented imagify in blacklist
