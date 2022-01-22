@@ -40,14 +40,14 @@ ____
 ![image](https://user-images.githubusercontent.com/20801141/150625991-04a8b64b-b349-415a-81e0-cc91a7c913b2.png)
 
 
-* slickstack with wp-rocket and all settings, WITHOUT imagify, WITH Cloudflare Proxymode  
+* now with wp-rocket and all settings, WITHOUT imagify, still WITH Cloudflare Proxymode  
 ![image](https://user-images.githubusercontent.com/20801141/150626090-af03c681-82dc-4867-81b6-be4a1f4f2447.png)
 
 
-* slickstack + wp-rocket + imagify + cloudflare proxy  
+* now + wp-rocket + imagify + cloudflare proxy  
 
 
-* slickstack + wp-rocket + imagify + cloudflare no-proxy  
+* now + wp-rocket + imagify + cloudflare no-proxy  
 
 
 * comparison: maxed out litespeed enterprise + no wp-rocket, no imagify, no CDN
