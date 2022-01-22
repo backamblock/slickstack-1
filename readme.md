@@ -20,7 +20,7 @@ Now here comes the thing. Nginx caching is nice and fast for static sites but wh
 * it adds Minification, GOOD Browser-Cache, Cache for logged in users
 * and Cache for Users with items in the cart
 * the lazy loading works as expected without layout shifts
-* combine it with imagify (free plan) for set-and-forget image compression and webp
+* combine it with image compression and webp and off you go
 ### And my personal #1 Reason: it works with Onlineshops!
 Faster checkout time means less time to rethink the buying decision!  
 
