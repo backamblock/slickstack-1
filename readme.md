@@ -28,7 +28,7 @@ These add bloat, yes! But when everything is cached and nginx takes the guest vi
 
 I did not notice any conflicts with ss-config in terms of reliability. it just doubles the caching. i will share my settings in another file sometime soon.
 
-# Speed Comparison
+# Speed Comparison (look at First Byte, Document complete and Fully loaded)
 * pure slickstack with Kadence theme, woocommerce and stock "Outdoor Shop" Starter site, no other changes
 ![image](https://user-images.githubusercontent.com/20801141/150625991-04a8b64b-b349-415a-81e0-cc91a7c913b2.png)
 
