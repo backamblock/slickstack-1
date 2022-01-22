@@ -40,17 +40,17 @@ ____
 ![image](https://user-images.githubusercontent.com/20801141/150625991-04a8b64b-b349-415a-81e0-cc91a7c913b2.png)
 
 
-* now with wp-rocket and all settings, WITHOUT imagify, still WITH Cloudflare Proxymode  
+* now with wp-rocket and all settings, WITHOUT image compression, still WITH Cloudflare Proxymode  
 ![image](https://user-images.githubusercontent.com/20801141/150626090-af03c681-82dc-4867-81b6-be4a1f4f2447.png)
 
 
-* now + wp-rocket + imagify + cloudflare proxy  
+* now + wp-rocket + image compression + cloudflare proxy  
 
 
-* now + wp-rocket + imagify + cloudflare no-proxy  
+* now + wp-rocket + image compression + cloudflare no-proxy  
 
 
-* comparison: maxed out litespeed enterprise + no wp-rocket, no imagify, no CDN
+* comparison: maxed out litespeed enterprise + no wp-rocket, no image compression, no CDN
 ![image](https://user-images.githubusercontent.com/20801141/150626076-90029c69-6604-45a2-b582-bff20c2c538e.png)
 
 ____
