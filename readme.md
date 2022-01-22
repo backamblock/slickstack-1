@@ -54,6 +54,11 @@ ____
 ![image](https://user-images.githubusercontent.com/20801141/150626076-90029c69-6604-45a2-b582-bff20c2c538e.png)
 
 ____
+## Things to keep in mind:
+* you need to manually flush WP-Rocket
+* after that, flush slickstack caches
+* after that, start wp-rocket preload
+____
 ## Things changed over original:
 * commented wp-rocket in blacklist
 * commented imagify in blacklist
