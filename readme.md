@@ -21,8 +21,7 @@ Now here comes the thing. Nginx caching is nice and fast for static sites but wh
 * and Cache for Users with items in the cart
 * the lazy loading works as expected without layout shifts
 * combine it with imagify (free plan) for set-and-forget image compression and webp
-
-**and my personal #1 Reason: it works with Onlineshops!**  
+### And my personal #1 Reason: it works with Onlineshops!
 Faster checkout time means less time to rethink the buying decision!  
 
 These add bloat, yes! But when everything is cached and nginx takes the guest visitors, that doesn't really matter. In Cloudflare non-proxy mode i have a TTFB of 60-80ms without CDN, with proxy it is around 100-150ms
