@@ -61,5 +61,5 @@ ____
 ____
 ## Things changed over original:
 * commented wp-rocket in blacklist
-* commented imagify in blacklist
+* commented optimole in blacklist
 * ...
