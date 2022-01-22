@@ -1565,7 +1565,7 @@ wp-resources-url-optimization ;; not maintained
 wp-retina-2x ;; ss conflicts (CloudFlare), resource intensive, creates junk files, bad practice (should be done by CDN)
 wp-retina-2x-pro ;; ss conflicts (CloudFlare), resource intensive, creates junk files, bad practice (should be done by CDN)
 /wp-review/ ;; spyware company, poor coding, serious errors, better options exist (MyThemeShop)
-wp-rocket ;; bloated, ss conflicts
+;; wp-rocket ;; bloated, ss conflicts ;; hugely improves frontend experience together with browser caching and lazyload
 wp-rocket-static-exclude-defer-js ;; ss conflicts
 wp-roids ;; ss conflicts, creates instability
 wp-rollback ;; bloated
