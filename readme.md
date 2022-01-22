@@ -28,6 +28,19 @@ These add bloat, yes! But when everything is cached and nginx takes the guest vi
 
 I did not notice any conflicts with ss-config in terms of reliability. it just doubles the caching. i will share my settings in another file sometime soon.
 
+# Speed Comparison
+* pure slickstack with Kadence theme, woocommerce and stock "Outdoor Shop" Starter site, no other changes
+
+
+* slickstack with wp-rocket and all settings, WITHOUT imagify, WITH Cloudflare Proxymode
+
+
+* slickstack + wp-rocket + imagify + cloudflare proxy
+
+
+* slickstack + wp-rocket + imagify + cloudflare no-proxy
+
+
 ## Things changed:
 * commented wp-rocket in blacklist
 * commented imagify in blacklist
