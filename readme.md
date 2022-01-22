@@ -24,21 +24,27 @@ Now here comes the thing. Nginx caching is nice and fast for static sites but wh
 ### And my personal #1 Reason: it works with Onlineshops!
 Faster checkout time means less time to rethink the buying decision!  
 
-These add bloat, yes! But when everything is cached and nginx takes the guest visitors, that doesn't really matter. In Cloudflare non-proxy mode i have a TTFB of 60-80ms without CDN, with proxy it is around 100-150ms
+These add bloat, yes! But when everything is cached and nginx takes the guest visitors, that doesn't really matter. In Cloudflare non-proxy mode i have a TTFB of 60-80ms without CDN, with proxy or CDN it is around 100-150ms
 
 I did not notice any conflicts with ss-config in terms of reliability. it just doubles the caching. i will share my settings in another file sometime soon.
 
 # Speed Comparison
 * pure slickstack with Kadence theme, woocommerce and stock "Outdoor Shop" Starter site, no other changes
+![image](https://user-images.githubusercontent.com/20801141/150625991-04a8b64b-b349-415a-81e0-cc91a7c913b2.png)
 
 
 * slickstack with wp-rocket and all settings, WITHOUT imagify, WITH Cloudflare Proxymode
+![image](https://user-images.githubusercontent.com/20801141/150626090-af03c681-82dc-4867-81b6-be4a1f4f2447.png)
 
 
 * slickstack + wp-rocket + imagify + cloudflare proxy
 
 
 * slickstack + wp-rocket + imagify + cloudflare no-proxy
+
+
+* comparison: maxed out litespeed enterprise + no wp-rocket, no imagify, no CDN
+![image](https://user-images.githubusercontent.com/20801141/150626076-90029c69-6604-45a2-b582-bff20c2c538e.png)
 
 
 ## Things changed:
