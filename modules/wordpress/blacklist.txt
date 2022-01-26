@@ -831,7 +831,7 @@ litespeed-cache ;; ss conflicts (litespeed)
 live-weather-station ;; pointless, resource intensive
 loading-page ;; bloated, bad idea
 local-emoji ;; pointless, ss conflicts
-loco-translate ;; pointless, creates instability, potential data loss
+;; loco-translate ;; pointless, creates instability, potential data loss
 logbook ;; excessive logging
 login-lockdown ;; excessive logging
 login-recaptcha ;; pointless, bloated, ss conflicts (By Robert Peake)
