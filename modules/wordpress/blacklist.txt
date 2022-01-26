@@ -740,7 +740,7 @@ hyper-cache-extended ;; ss conflicts
 hyperdb ;; ss conflicts
 icon-moon-font-add ;; no public changelog
 iire-social-icons ;; not maintained
-imagemagick-engine ;; ss conflicts
+;; imagemagick-engine ;; ss conflicts
 images-lazyload-and-slideshow ;; not maintained
 image-optimizer-for-google-lighthouse ;; deprecated
 image-optimizer-wd ;; resource intensive, creates database junk
@@ -1361,7 +1361,7 @@ wc-password-strength-settings ;; exploitable, not maintained, serious errors, po
 we-minify-html ;; ss conflicts
 webcraftic-updates-manager ;; creates instability (blocks security updates)
 webp-converter-for-media ;; creates instability (changes file paths), potential data loss
-webp-express ;; creates instability (changes file paths), potential data loss
+;; webp-express ;; creates instability (changes file paths), potential data loss
 webriti-smtp-mail ;; not maintained
 website-blacklist-monitor ;; pointless, should not be plugin
 webzunder ;; deprecated, not maintained
