@@ -1258,7 +1258,6 @@ taxonomy-terms-order ;; hijacks wp core, creates instability (By Nsp-Code)
 tco-google-analytics ;; no public changelog (By ThemeCO)
 td-social-counter ;; not maintained, possible excessive logging (TagDiv Social Counter)
 technoscore-bing-conversion-tracking ;; pointless (generic snippet function), not maintained (by Technoscore)
-;; temporary-login-without-password ;; exploitable, pointless - deactivate when not needed!
 tentblogger-optimize-wordpress-database-plugin ;; not maintained
 term-management-tools ;; not maintained, creates instability, potential data loss
 /testimonials/ ;; poor coding, no public changelog (E2W Plugins whitelabel)
@@ -2015,6 +2014,7 @@ The following utility plugins should be deactivated when not in use for better p
 ;; match any path (case insensitive)
 ;; for exact directory matches use slashes e.g. /revslider/
 [path pause]
+temporary-login-without-password ;; exploitable, pointless - deactivate when not needed!
 enable-jquery-migrate-helper ;; utility (By Automattic) aka jQuery Migrate library
 all-in-one-wp-migration ;; import/export
 /batchmove/ ;; utility
