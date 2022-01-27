@@ -1258,7 +1258,7 @@ taxonomy-terms-order ;; hijacks wp core, creates instability (By Nsp-Code)
 tco-google-analytics ;; no public changelog (By ThemeCO)
 td-social-counter ;; not maintained, possible excessive logging (TagDiv Social Counter)
 technoscore-bing-conversion-tracking ;; pointless (generic snippet function), not maintained (by Technoscore)
-;; temporary-login-without-password ;; exploitable, pointless
+;; temporary-login-without-password ;; exploitable, pointless - deactivate when not needed!
 tentblogger-optimize-wordpress-database-plugin ;; not maintained
 term-management-tools ;; not maintained, creates instability, potential data loss
 /testimonials/ ;; poor coding, no public changelog (E2W Plugins whitelabel)
