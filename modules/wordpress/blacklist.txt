@@ -272,8 +272,6 @@ askapache-debug-viewer ;; php hacks
 askapache-google-404 ;; serious errors, not maintained
 aspexi-login-audit ;; excessive logging, not maintained
 asta-html-minifier ;; ss conflicts
-;; astra-sites ;; requires blacklisted plugins by Brainstorm Force that hack third party design products (By Brainstorm Force)
-;; astra-pro-sites ;; requires blacklisted plugins by Brainstorm Force that hack third party design products (By Brainstorm Force)
 async-javascript ;; creates instability
 async-social-sharing ;; not maintained
 asynchronous-javascript ;; not maintained
@@ -2014,6 +2012,8 @@ The following utility plugins should be deactivated when not in use for better p
 ;; match any path (case insensitive)
 ;; for exact directory matches use slashes e.g. /revslider/
 [path pause]
+astra-sites ;; requires blacklisted plugins by Brainstorm Force that hack third party design products (By Brainstorm Force)
+astra-pro-sites ;; requires blacklisted plugins by Brainstorm Force that hack third party design products (By Brainstorm Force)
 temporary-login-without-password ;; exploitable, pointless - deactivate when not needed!
 enable-jquery-migrate-helper ;; utility (By Automattic) aka jQuery Migrate library
 all-in-one-wp-migration ;; import/export
