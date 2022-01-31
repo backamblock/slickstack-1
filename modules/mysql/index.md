@@ -25,7 +25,12 @@ title: MySQL (Public Mirrors)
 * https://www.sitepoint.com/optimize-mysql-indexes-slow-queries-configuration/
 * https://dzone.com/articles/how-to-optimize-mysql-queries-for-speed-and-perfor
 * https://stackoverflow.com/questions/2317650/setting-global-sql-mode-in-mysql
+* https://www.reddit.com/r/mysql/comments/owye5g/whats_the_status_of_mysql_8190/
+* https://blog.kernl.us/2019/10/wordpress-database-performance-showdown-mysql-vs-mariadb-vs-percona/
+* https://www.percona.com/resources/webinars/mariadb-103-vs-mysql-80
+* https://hackr.io/blog/mariadb-vs-mysql
+* https://www.cloudways.com/blog/mysql-vs-mariadb/
 
 ----
 
-*Last updated: May 4, 2021*
+*Last updated: Jan 31, 2022*
