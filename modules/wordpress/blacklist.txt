@@ -236,7 +236,7 @@ admin-menu-editor ;; creates instability
 adminer ;; exploitable, creates instability
 adsense-click-fraud-monitoring ;; deprecated
 Advanced-Custom-Fields-Multilingual ;; possible thrashing, not maintained
-advanced-database-cleaner ;; ss conflicts
+;; advanced-database-cleaner ;; ss conflicts
 advanced-menu-widget ;; serious errors, not maintained (by Ján Bočínec)
 advanced-speed-increaser ;; ss conflicts
 advanced-wp-reset ;; ss conflicts, potential data loss
