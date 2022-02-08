@@ -969,7 +969,7 @@ pegasaas ;; ss conflicts
 pegasaas-accelerator-wp ;; ss conflicts
 per-page-add-to ;; bad practice, not maintained, creates instability
 perfectdashboard ;; ss conflicts, bad practice
-perfmatters ;; bloated, stolen code, ss conflicts
+;; perfmatters ;; bloated, stolen code, ss conflicts
 performance-optimization-order-styles-and-javascript ;; not maintained
 performance-tester ;; not maintained, resource intensive
 permalink-finder ;; creates instability, bad practice
