@@ -25,7 +25,7 @@ function ss_login_message() {
 	return '<p class="message">Having trouble logging in? Please clear your browser cache and/or cookies for this site and try again. Thanks, and apologies! &mdash; <em>SlickStack</em></p>';
 }
 
-// add_filter('login_message', 'ss_login_message');
+add_filter('login_message', 'ss_login_message');
 
 /** ********************************************************************************************* */
 /** XXX Common: SlickStack WP Admin Notices (Production) **************************************** */
@@ -172,18 +172,17 @@ function ss_menu() {
          
     <nav class="nav-tab-wrapper">
       <a href="?page=slickstack" class="nav-tab <?php if($tab===null):?>nav-tab-active<?php endif; ?>">General</a>
-      <a href="?page=slickstack&tab=billing" class="nav-tab <?php if($tab==='crons'):?>nav-tab-active<?php endif; ?>">Billing</a>
-      <a href="?page=slickstack&tab=support" class="nav-tab <?php if($tab==='support'):?>nav-tab-active<?php endif; ?>">Support</a>
-      <a href="?page=slickstack&tab=backups" class="nav-tab <?php if($tab==='backups'):?>nav-tab-active<?php endif; ?>">Backups</a>
       
       <?php if(MULTISITE != 'true'){ ?>
       <a href="?page=slickstack&tab=sftp" class="nav-tab <?php if($tab==='sftp'):?>nav-tab-active<?php endif; ?>">SFTP</a>
       <a href="?page=slickstack&tab=adminer" class="nav-tab <?php if($tab==='adminer'):?>nav-tab-active<?php endif; ?>">Adminer</a>
       <a href="?page=slickstack&tab=error-log" class="nav-tab <?php if($tab==='error-log'):?>nav-tab-active<?php endif; ?>">Error Log</a>
       <a href="?page=slickstack&tab=caching" class="nav-tab <?php if($tab==='caching'):?>nav-tab-active<?php endif; ?>">Caching</a>
-      <a href="?page=slickstack&tab=blacklist" class="nav-tab <?php if($tab==='blacklist'):?>nav-tab-active<?php endif; ?>">Plugin Blacklist</a>
-      <a href="?page=slickstack&tab=cloudflare" class="nav-tab <?php if($tab==='cloudflare'):?>nav-tab-active<?php endif; ?>">CloudFlare</a>
       <?php } ?>
+      
+      <a href="?page=slickstack&tab=backups" class="nav-tab <?php if($tab==='backups'):?>nav-tab-active<?php endif; ?>">Backups</a>
+      <a href="?page=slickstack&tab=billing" class="nav-tab <?php if($tab==='billing'):?>nav-tab-active<?php endif; ?>">Billing</a>
+      <a href="?page=slickstack&tab=support" class="nav-tab <?php if($tab==='support'):?>nav-tab-active<?php endif; ?>">Support</a>
       
     </nav><!-- nab-tab-wrapper -->
 
@@ -191,11 +190,35 @@ function ss_menu() {
 	
     <?php switch($tab) :
     
+    
 	case 'backups':
 	
 		echo '<br class="clear" />
 		<p>Coming soon... powered by Rclone! Choose from Backblaze, Dropbox, Amazon S3, Google Drive, and more...</p>';
-
+        
+	break;
+	
+	
+	case 'billing':
+	
+		echo '<br class="clear" />
+		<p>Coming soon... easy automatic billing options for web agencies.</p>';
+        
+	break;
+	
+	
+	case 'support':
+	
+		echo '<br class="clear" />
+		<h2>Get Support</h2>
+		<p>We are available to help you with your server, please contact using below methods:</p>
+		
+		<ul>
+		<li>Support requests: <code>' . WHITELABEL_SUPPORT_URL . '</code></li>
+		<li>Support email: <code>' . WHITELABEL_SUPPORT_EMAIL . '</code></li>
+		</ul>
+		
+		<br class="clear" />';
         
 	break;
 	

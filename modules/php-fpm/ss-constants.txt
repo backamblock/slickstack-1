@@ -6,7 +6,7 @@
 /** path: n/a (boilerplate) ********************************************************************* */
 /** destination: /var/www/meta/ss-constants.php (after install) ********************************* */
 /** purpose: Loads various SlickStack environment variables as PHP defined constants ************ */
-/** module version: PHP-FPM 8.1.x *************************************************************** */
+/** module version: PHP-FPM 8.1.x + WordPress 5.9.x ********************************************* */
 /** sourced by: wp-config.php ******************************************************************* */
 /** bash aliases: n/a (ss-install-php-config) *************************************************** */
 /** ********************************************************************************************* */
@@ -15,7 +15,7 @@
 /** DEVELOPERS CAN USE THESE GENERIC PHP CONSTANTS FOR ANY CUSTOM CODING WORK */
 
 /** ********************************************************************************************* */
-/** SS-Constants: General SlickStack Constants ************************************************** */
+/** SS-Constants: General Settings ************************************************************** */
 /** ********************************************************************************************* */
 
 /** below are some general PHP constants that reflect SlickStack settings and features */
@@ -67,6 +67,15 @@ define('SFTP_PUBLIC_DIR', '/var/www/html'); // ss = /var/www/html
 
 // define('CLOUDFLARE_API_KEY', '@CLOUDFLARE_API_KEY'); // ss= *must be unique*
 // define('CLOUDFLARE_API_EMAIL', '@CLOUDFLARE_API_EMAIL'); // ss = *must be unique*
+
+/** ********************************************************************************************* */
+/** SS-Constants: Whitelabel Settings *********************************************************** */
+/** ********************************************************************************************* */
+
+// define('WHITELABEL_BRAND', '@WHITELABEL_BRAND'); // *must be unique*
+// define('WHITELABEL_HOMEPAGE', '@WHITELABEL_HOMEPAGE'); // *must be unique*
+define('WHITELABEL_SUPPORT_URL', '@WHITELABEL_SUPPORT_URL'); // *must be unique*
+define('WHITELABEL_SUPPORT_EMAIL', '@WHITELABEL_SUPPORT_EMAIL'); // *must be unique*
 
 /** ********************************************************************************************* */
 /** SlickStack: External References Used To Improve This Script (Thanks, Interwebz) ************* */
