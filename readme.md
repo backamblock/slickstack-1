@@ -64,6 +64,6 @@ ____
 * after that, start wp-rocket preload
 ____
 ## Things changed over original:
-* commented wp-rocket in blacklist
-* commented imagify in blacklist
-* ...
+* various things in blacklist
+* more modifications are done by my custom install script (will publish soon)
+* custom ss-config used by install script (will publish soon)
