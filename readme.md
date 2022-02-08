@@ -20,6 +20,7 @@ Now here comes the thing. Nginx caching is nice and fast for static sites but wh
 * it adds Minification, GOOD Browser-Cache, Cache for logged in users
 * and Cache for Users with items in the cart
 * the lazy loading works as expected without layout shifts
+* did i mention the wonderful link-preloading?
 * combine it with image compression and webp and off you go
 ### And my personal #1 Reason: it works with Onlineshops!
 Faster checkout time means less time to rethink the buying decision!  
@@ -44,13 +45,15 @@ ____
 ![image](https://user-images.githubusercontent.com/20801141/150626090-af03c681-82dc-4867-81b6-be4a1f4f2447.png)
 
 
-* now + wp-rocket + image compression + cloudflare proxy  
+* now + wp-rocket + image compression + webP + cloudflare proxy
+* sadly, webpagetest has updated to new design which does not show all values anymore :/ so no nice picture will ever come here
+* i can tell you, it is VERY fast tho. google pagespeed shows 97-99 mobile between tests, 100 desktop no matter what
+* fully loaded times for first visit are around 1 second for desktop which would compare to the fully loaded on WPT before
+* since this is obviously fast enough, i kept CF proxy mode as with these loading times, 50ms is not really worth the loss of CF
+* here is at least a picture proof of google pagespeed :)
 
 
-* now + wp-rocket + image compression + cloudflare no-proxy  
-
-
-* comparison: maxed out litespeed enterprise + no wp-rocket, no image compression, no CDN
+* comparison: maxed out litespeed enterprise + no wp-rocket, with image compression and webP, with QUIC.cloud CDN
 ![image](https://user-images.githubusercontent.com/20801141/150626076-90029c69-6604-45a2-b582-bff20c2c538e.png)
 
 ____
