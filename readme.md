@@ -50,7 +50,7 @@ ____
 * i can tell you, it is VERY fast tho. google pagespeed shows 97-99 mobile between tests, 100 desktop no matter what
 * fully loaded times for first visit are around 1 second for desktop which would compare to the fully loaded on WPT before
 * since this is obviously fast enough, i kept CF proxy mode as with these loading times, 50ms is not really worth the loss of CF
-* here is at least a picture proof of google pagespeed :)
+* here is at least a picture proof of google pagespeed mobile score :) Desktop is 100 and 0.4 seconds for everything.
 ![image](https://user-images.githubusercontent.com/20801141/152898836-b4a3f49a-3478-4edd-b6fd-2ecfea138359.png)
 
 
