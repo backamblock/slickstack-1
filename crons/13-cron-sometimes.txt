@@ -7,12 +7,12 @@
 #### path: /var/www/crons/13-cron-sometimes ########################################################
 #### destination: n/a (not a boilerplate) ##########################################################
 #### purpose: SlickStack core cron job *sometimes* (13/13) will run every ~2 months ################
-#### module version: Ubuntu 20.04 LTS ##############################################################
+#### module version: Ubuntu 22.04 LTS ##############################################################
 #### sourced by: root crontab ######################################################################
 #### bash aliases: ss cron 13, ss cron sometimes ###################################################
 ####################################################################################################
 
-## NEVER MODIFY THE ROOT CRONTAB OR SS CORE CRON JOBS OR YOUR STACK WILL STOP WORKING ##
+## NEVER MODIFY ROOT CRONTAB OR SLICKSTACK CRON JOBS OR YOUR STACK WILL STOP WORKING ##
 ## INSTEAD ADJUST INTERVAL_SS SETTINGS IN SS-CONFIG OR EDIT CUSTOM CRON FILES ##
 
 ####################################################################################################
@@ -26,8 +26,9 @@
 ## E. Touch Timestamp File
 ## F. Run Custom Tasks (EDIT SOURCED FILES)
 ## G. Run Scheduled Tasks (DO NOT EDIT)
-## H. Reset Permissions (SlickStack Core Scripts)
-## I. Delete Lock File
+## H. Run Scheduled Reboot (DO NOT EDIT)
+## I. Reset Permissions (SlickStack Core Scripts)
+## J. Delete Lock File
 
 ####################################################################################################
 #### A. 13-Cron-Sometimes: Validate (Restore) SS-Config ############################################
@@ -242,13 +243,21 @@ if [[ "$INTERVAL_SS_INSTALL_UBUNTU_CRONTAB" == "sometimes" ]] || [[ -z "$INTERVA
     source "$PATH_SS_INSTALL_UBUNTU_CRONTAB"
 fi
 
+####################################################################################################
+#### H. 13-Cron-Sometimes: Run Scheduled Reboot (DO NOT EDIT) ######################################
+####################################################################################################
+
+## reboot task must come last in this cron job to avoid skipping other scheduled tasks ##
+## we also force delete the cron lock file to ensure removal before rebooting ##
+
 ## run ss-reboot-machine if set to sometimes ##
 if [[ "$INTERVAL_SS_REBOOT_MACHINE" == "sometimes" ]]; then 
+    ss_rm "$LOCK_13_CRON_SOMETIMES"
     source "$PATH_SS_REBOOT_MACHINE"
 fi
 
 ####################################################################################################
-#### H. 13-Cron-Sometimes: Reset Permissions (SlickStack Core Scripts) #############################
+#### I. 13-Cron-Sometimes: Reset Permissions (SlickStack Core Scripts) #############################
 ####################################################################################################
 
 ## THIS SNIPPET DOES NOT RELY ON SS-CONFIG OR SS-FUNCTIONS
@@ -266,7 +275,7 @@ chmod 0700 /var/www/crons/*cron* ## 0700 means only root can execute
 chmod 0700 /var/www/crons/custom/*cron* ## 0700 means only root can execute
 
 ####################################################################################################
-#### I. 13-Cron-Sometimes: Delete Lock File ########################################################
+#### J. 13-Cron-Sometimes: Delete Lock File ########################################################
 ####################################################################################################
 
 ## here we delete the lock file associated with this cron job to clear the cron queue ##

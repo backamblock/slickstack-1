@@ -124,7 +124,8 @@ function ss_admin_notices_staging() {
     <div class="notice notice-warning">
     <p><strong>FOR STAGING PURPOSES ONLY:</strong> You are now browsing a temporary staging site, created automagically from your live production site. Data is continuously synced every 12 hours and will overwrite existing data (i.e. all staging files/database) unless you pause syncing. Please use this site to briefly test new plugins, themes, or features, and not for long-term web design work or publishing content. Both sites share the <code>/uploads/</code> directory from the production site to save disk space and avoid conflicts, so be sure not to upload any media files here. To avoid conflicts and reduce database bloat, it is best not to push your staging database to your production site (instead, you can simply replicate successful "staging" features on your production site); however, if you do push your staging site live, keep in mind that only <strong>Plugins</strong>, <strong>Themes</strong>, and the <code>wp_options</code> table will be pushed, and nothing else (this process will overwrite the Plugins, Themes, and <code>wp_options</code> table on your production site). ALL OTHER FILES AND MYSQL TABLES WILL BE IGNORED WHEN PUSHING FROM STAGING TO PRODUCTION.</p>
     <p>The following functions are installed by default: <em>Disable Emails</em>, <em>Disable WP Cron</em>, and <em>Disable Default Runner (WooCommerce Scheduler)</em>.</p>
-    <p><a href="#">Pause Syncing</a></p>
+    <br class="clear" />
+    <a class="button" href="#">Pause Syncing</a>
     </div>
 
     <?php } else { }
@@ -177,7 +178,7 @@ function ss_menu() {
       
       <?php if(MULTISITE != 'true'){ ?>
       <a href="?page=slickstack&tab=sftp" class="nav-tab <?php if($tab==='sftp'):?>nav-tab-active<?php endif; ?>">SFTP</a>
-      <a href="?page=slickstack&tab=adminer" class="nav-tab <?php if($tab==='adminer'):?>nav-tab-active<?php endif; ?>">Adminer (phpMyAdmin)</a>
+      <a href="?page=slickstack&tab=adminer" class="nav-tab <?php if($tab==='adminer'):?>nav-tab-active<?php endif; ?>">Adminer</a>
       <a href="?page=slickstack&tab=error-log" class="nav-tab <?php if($tab==='error-log'):?>nav-tab-active<?php endif; ?>">Error Log</a>
       <a href="?page=slickstack&tab=caching" class="nav-tab <?php if($tab==='caching'):?>nav-tab-active<?php endif; ?>">Caching</a>
       <a href="?page=slickstack&tab=blacklist" class="nav-tab <?php if($tab==='blacklist'):?>nav-tab-active<?php endif; ?>">Plugin Blacklist</a>
@@ -203,21 +204,27 @@ function ss_menu() {
 	
 	if(MULTISITE != 'true'){
 	
-		$ip_server = $_SERVER['SERVER_ADDR']; ?>
+		$ip_server = $_SERVER['SERVER_ADDR'];
 
-		<br class="clear" />
-		<h2>SFTP Settings</h2>
-		<p><strong>Website:</strong> <code>' . WP_HOME . '</code></p>
-		<p><strong>Server (host):</strong> <code>' . $ip_server . '</code></p>
-		<p><strong>SFTP user:</strong> <code>' . SFTP_DETAILS_USER . '</code></p>
-		<p><strong>SFTP password:</strong> <code>' . SFTP_DETAILS_PASSWORD . '</code></p>
-		<p><strong>SFTP port:</strong> <code>' . SFTP_DETAILS_PORT . '</code></p>
-		<p><strong>Root Directory:</strong> <code>/var/www</code></p>
-		<p><strong>Public Directory:</strong> <code>/var/www/html</code></p>
-		<br class="clear" />
-		<p><em>You must choose the SFTP protocol when connecting (not FTP or FTPS) on the port number listed above.</em></p>';
+		echo '<br class="clear" />
+		<h2>SFTP Details</h2>
 		
-	<?php }
+		<ul>
+		<li>Website: <code>' . WP_HOME . '</code></li>
+		<li>Server (host): <code>' . $ip_server . '</code></li>
+		<li>SFTP user: <code>' . SFTP_USER . '</code></li>
+		<li>SFTP password: <code>' . SFTP_PASSWORD . '</code></li>
+		<li>SFTP port: <code>' . SFTP_PORT . '</code></li>
+		<li>Root Directory: <code>/var/www</code></li>
+		<li>Public Directory: <code>/var/www/html</code></li>
+		</ul>
+		
+		<br class="clear" />
+		<p><em>You must choose the SFTP protocol when connecting (not FTP or FTPS) on the port number listed above.</em></p>
+		<br class="clear" />
+		<a class="button" href="#">Reset SFTP Password</a>';
+		
+	} // end if
         
 	break;
 	
@@ -225,16 +232,19 @@ function ss_menu() {
 	case 'adminer':
 		
     echo '<br class="clear" />
-		<h2>Adminer Settings</h2>
-		<p><strong>Database host:</strong> <code>' . DB_HOST . '</code></p>
-		<p><strong>Database name:</strong> <code>' . DB_NAME . '</code></p>
-		<p><strong>Database user:</strong> <code>' . DB_USER . '</code></p>
-		<p><strong>Database password:</strong> <code>' . DB_PASSWORD . '</code></p>
+		<h2>Adminer</h2>
+		<ul>
+		<li>Database host: <code>' . DB_HOST . '</code></li>
+		<li>Database name: <code>' . DB_NAME . '</code></li>
+		<li>Database user: <code>' . DB_USER . '</code></li>
+		<li>Database password: <code>' . DB_PASSWORD . '</code></li>
+		</ul>
 		<br class="clear" />
-		<p><a href="/adminer?username=' . DB_USER . '&db=' . DB_NAME . '&server=' . DB_HOST . '" target="_blank" rel="noopener noreferrer">Click here to open Adminer (new window)</a></p>';
+		<a class="button" href="/adminer?username=' . DB_USER . '&db=' . DB_NAME . '&server=' . DB_HOST . '" target="_blank" rel="noopener noreferrer">Open Adminer (new window)</a>';
         
 		break;
-		
+	
+	
 	case 'error-log':
 		
     echo '<br class="clear" />
@@ -271,7 +281,7 @@ function ss_menu() {
 
     echo '</pre></div> 
     <br class="clear" />
-    <a href="#" class="button">Clear Error Log</a>';
+    <a class="button" href="#">Clear Error Log</a>';
 
 		break;
 		
