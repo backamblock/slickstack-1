@@ -21,25 +21,48 @@ Prefix: SSCOMM
 /** this is a simple login page welcome message that we use to announce important things */
 /** most of the time this feature will only be activated in case of emergencies */
 
-function ss_login_message() {
-	return '<p class="message">Having trouble logging in? Please clear your browser cache and/or cookies for this site and try again. Thanks, and apologies! &mdash; <em>SlickStack</em></p>';
+if(WP_ENVIRONMENT_TYPE == 'production') {
+
+	function ss_login_message_production() {
+		return '<p class="message">Having trouble logging in? Please clear your browser cache and/or cookies for this site and try again. Thanks, and apologies! &mdash; <em>SlickStack</em></p>';
+	}
+	
+	add_filter('login_message', 'ss_login_message_production');
+
 }
 
-add_filter('login_message', 'ss_login_message');
+if(WP_ENVIRONMENT_TYPE == 'staging') {
+ 
+	function ss_login_message_staging() {
+		return '<p class="message">Remember that all user logins on your staging site should be the same (i.e. synced) as they exist on your production site. &mdash; <em>SlickStack</em></p>';
+	}
+
+	add_filter('login_message', 'ss_login_message_staging');
+}
+
+if(WP_ENVIRONMENT_TYPE == 'development') {
+ 
+	function ss_login_message_development() {
+		return '<p class="message">First time logging in to this dev site? The default username/password should be the same as your SFTP login credentials. &mdash; <em>SlickStack</em></p>';
+	}
+
+	add_filter('login_message', 'ss_login_message_development');
+}
 
 /** ********************************************************************************************* */
 /** XXX Common: SlickStack WP Admin Notices (Production) **************************************** */
 /** ********************************************************************************************* */
 
-// add_action('admin_notices', 'ss_admin_notice_production_one');
+add_action('admin_notices', 'ss_admin_notice_production_one');
 
 function ss_admin_notice_production_one() {
 
     $current_user = wp_get_current_user();
     if(current_user_can('manage_options')) { ?>
     
-    <div class="notice notice-warning">
-    <p><strong>May 29, 2021:</strong> The plugin <strong>Simple 301 Redirects</strong> has been immediately added to our blacklist due to active malware redirect attacks that are infecting the plugin after it was acquired by a new owner, WPDeveloper. A good alternative is <strong>Safe Redirect Manager</strong> by 10up agency. We may be able to re-enable this plugin again later after their team patches the exploits, but it will probably be after some weeks. You can review their 301 rules using the Adminer (phpMyAdmin) tool on your MySQL database, if you have a lot of redirects that need to be recovered and migrated to a new plugin.</p>
+    <div class="notice notice-info">
+    <p><strong>Help us reach 10+ reviews on SourceForge</strong></p>
+    <p>We hope you are enjoying SlickStack, and the stability and security that it brings to your WordPress website. As a free software project, the only way we grow is by word of mouth. Please consider leaving an honest review on <a href="https://sourceforge.net/software/product/SlickStack/"><strong>SourceForge</strong></a> if you would like our project to continue growing and getter better during 2022... your encouragement and feedback is truly the only thing keeping us going. And thank you, ahead of time!</p>
     
     <p><em>This message will disappear automatically after a few days, thank you. — SlickStack</em></p>
     
@@ -175,7 +198,7 @@ function ss_menu() {
       
       <?php if(MULTISITE != 'true'){ ?>
       <a href="?page=slickstack&tab=sftp" class="nav-tab <?php if($tab==='sftp'):?>nav-tab-active<?php endif; ?>">SFTP</a>
-      <a href="?page=slickstack&tab=adminer" class="nav-tab <?php if($tab==='adminer'):?>nav-tab-active<?php endif; ?>">Adminer</a>
+      <a href="?page=slickstack&tab=database" class="nav-tab <?php if($tab==='database'):?>nav-tab-active<?php endif; ?>">Database</a>
       <a href="?page=slickstack&tab=error-log" class="nav-tab <?php if($tab==='error-log'):?>nav-tab-active<?php endif; ?>">Error Log</a>
       <a href="?page=slickstack&tab=caching" class="nav-tab <?php if($tab==='caching'):?>nav-tab-active<?php endif; ?>">Caching</a>
       <?php } ?>
@@ -252,10 +275,10 @@ function ss_menu() {
 	break;
 	
 	
-	case 'adminer':
+	case 'database':
 		
     echo '<br class="clear" />
-		<h2>Adminer</h2>
+		<h2>Database Access</h2>
 		<ul>
 		<li>Database host: <code>' . DB_HOST . '</code></li>
 		<li>Database name: <code>' . DB_NAME . '</code></li>
@@ -314,7 +337,6 @@ function ss_menu() {
         	echo '<br class="clear" />
 		<h2>Cache Settings</h2>
 		<p><strong>PHP OPcache:</strong> ' . (is_array(opcache_get_status()) ? 'enabled' : 'disabled') . '</p>
-		<p><strong>Object Cache:</strong> ' . OBJECT_CACHE . '</p>
 		<br class="clear" />
         	<p><a href="/wp-admin/options-general.php?page=clear-caches">Click here for Clear Caches settings (same window)</a></p>';
         	

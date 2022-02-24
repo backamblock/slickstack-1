@@ -48,8 +48,11 @@ source "$PATH_SS_DUMP_DATABASE"
 #### SS-Optimize-Database: Delete Junk Tables From MySQL Database ##################################
 ####################################################################################################
 
+
+# move to clean-database script
+
 ## delete junk WordPress core tables ##
-mysql --database="$DB_NAME" --execute="DROP TABLE IF EXISTS ${DB_PREFIX}links;" ## wp_links virtually deprecated
+# mysql --database="$DB_NAME" --execute="DROP TABLE IF EXISTS ${DB_PREFIX}links;" ## wp_links virtually deprecated
 
 ## delete blacklisted plugins tables (etc) ##
 
@@ -137,6 +140,17 @@ mysql $DB_NAME < /var/www/meta/drop_tables.sql
 # sed -i '$s/$/\;/' /var/www/meta/drop_tables.txt
 ## sed -i '$s/,$/[;]/' /var/www/meta/drop_tables.txt
 
+
+####################################################################################################
+# fix incorrect data values before converting to MyISAM
+####################################################################################################
+
+# eg. Incorrect datetime value: '0000-00-00 00:00:00'
+# Invalid default value for 'date_created'
+
+
+
+
 ####################################################################################################
 #### SS-Optimize-Database: Convert Any MyISAM Tables To InnoDB Engine ##############################
 ####################################################################################################
@@ -162,7 +176,10 @@ sed -i 's/$/ ENGINE=InnoDB\;/' /var/www/meta/myisam_tables.txt
 
 ## import the SQL query ##
 cp /var/www/meta/myisam_tables.txt /var/www/meta/myisam_tables.sql
-mysql $DB_NAME < /var/www/meta/myisam_tables.sql
+
+# mysql $DB_NAME < /var/www/meta/myisam_tables.sql
+mysql --init-command="SET SQL_MODE='ALLOW_INVALID_DATES';" $DB_NAME < /var/www/meta/myisam_tables.sql
+# https://stackoverflow.com/a/52334132/1718491
 
 ####################################################################################################
 #### SS-Optimize-Database: Purge Cache (Redis) #####################################################
@@ -210,5 +227,6 @@ touch "$TIMESTAMP_SS_OPTIMIZE_DATABASE"
 ## Ref: https://dev.mysql.com/doc/refman/8.0/en/option-modifiers.html
 ## Ref: https://alvinalexander.com/mysql/how-to-list-mysql-table-column-field-names-without-table-formatting-headers/
 ## Ref: https://dev.mysql.com/doc/refman/8.0/en/mysql-command-options.html
+## Ref: https://stackoverflow.com/questions/35565128/mysql-incorrect-datetime-value-0000-00-00-000000
 
 ## SS_EOF

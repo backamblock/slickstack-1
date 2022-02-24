@@ -226,12 +226,6 @@ define('CLOUDFLARE_API_KEY', '@CLOUDFLARE_API_KEY'); // ss= *must be unique*
 define('CLOUDFLARE_API_EMAIL', '@CLOUDFLARE_API_EMAIL'); // ss = *must be unique*
 
 /** ********************************************************************************************* */
-/** SlickStack: Custom Functions (MU Plugin) Settings ******************************************* */
-/** ********************************************************************************************* */
-
-define('CUSTOM_FUNCTIONS', true); // ss = true
-
-/** ********************************************************************************************* */
 /** SlickStack: Dashboard Cleanup (MU Plugin) Settings ****************************************** */
 /** ********************************************************************************************* */
 
@@ -264,15 +258,6 @@ define('DELETE_EXPIRED_TRANSIENTS', true); // ss = true
 // define('DELETE_EXPIRED_TRANSIENTS_MAX_BATCH_RECORDS', '50'); // default = 50
 
 /** ********************************************************************************************* */
-/** SlickStack: Disable Attachment Pages (MU Plugin) Settings *********************************** */
-/** ********************************************************************************************* */
-
-/** the following defined constants should not be hardcoded to allow for modification */
-/** modify these constants using the Custom Functions MU plugin or otherwise */
-
-// define('DISABLE_ATTACHMENT_PAGES', true); // default = true
-
-/** ********************************************************************************************* */
 /** SlickStack: Disable Embeds (MU Plugin) Settings ********************************************* */
 /** ********************************************************************************************* */
 
@@ -281,45 +266,6 @@ define('DELETE_EXPIRED_TRANSIENTS', true); // ss = true
 
 // define('DISABLE_EMBEDS', 'true'); // ss = true
 // define('DISABLE_EMBEDS_ALLOWED_SOURCES', 'none'); // default = none (blank)
-
-/** ********************************************************************************************* */
-/** SlickStack: Disable Emojis (MU Plugin) Settings ********************************************* */
-/** ********************************************************************************************* */
-
-define('DISABLE_EMOJIS', 'true'); // ss = true
-
-/** ********************************************************************************************* */
-/** SlickStack: Disable Empty Trash (MU Plugin) Settings **************************************** */
-/** ********************************************************************************************* */
-
-define('DISABLE_EMPTY_TRASH', 'true'); // ss = true
-
-/** ********************************************************************************************* */
-/** SlickStack: Disable Gutenberg (MU Plugin) Settings ****************************************** */
-/** ********************************************************************************************* */
-
-/** the following defined constants should not be hardcoded to allow for modification */
-/** modify these constants using the Custom Functions MU plugin or otherwise */
-
-// define('DISABLE_GUTENBERG', true); // default = true
-
-/** ********************************************************************************************* */
-/** SlickStack: Disable Image Compression (MU Plugin) Settings ********************************** */
-/** ********************************************************************************************* */
-
-define('DISABLE_IMAGE_COMPRESSION', true); // ss = true
-
-/** ********************************************************************************************* */
-/** SlickStack: Disable Post Via Email (MU Plugin) Settings ************************************* */
-/** ********************************************************************************************* */
-
-define('DISABLE_POST_VIA_EMAIL', true); // ss = true
-
-/** ********************************************************************************************* */
-/** SlickStack: Disable XML-RPC (MU Plugin) Settings ******************************************** */
-/** ********************************************************************************************* */
-
-define('DISABLE_XML_RPC', true); // ss = true
 
 /** ********************************************************************************************* */
 /** SlickStack: Force HTTPS (MU Plugin) Settings ************************************************ */
@@ -331,31 +277,6 @@ define('FORCE_HTTPS_INTERNAL_LINKS', true); // ss = true
 define('FORCE_HTTPS_INTERNAL_RESOURCES', true); // ss = true
 
 // define('FORCE_HTTPS_EXTERNAL_LINKS', false); // default = false
-
-/** ********************************************************************************************* */
-/** SlickStack: Force Strong Hashing (MU Plugin) Settings *************************************** */
-/** ********************************************************************************************* */
-
-define('FORCE_STRONG_HASHING', true); // ss = true
-
-/** ********************************************************************************************* */
-/** SlickStack: Header Cleanup (MU Plugin) Settings ********************************************* */
-/** ********************************************************************************************* */
-
-define('HEADER_CLEANUP', true); // ss = true
-
-/** ********************************************************************************************* */
-/** SlickStack: Limit Heartbeat (MU Plugin) Settings ******************************************** */
-/** ********************************************************************************************* */
-
-define('LIMIT_HEARTBEAT', true); // ss = true
-
-// define('LIMIT_HEARTBEAT_DISABLE_DASHBOARD', false); // default = false
-// define('LIMIT_HEARTBEAT_DISABLE_EDITOR', false); // default = false
-// define('LIMIT_HEARTBEAT_DISABLE_FRONTEND', true); // default = true
-// define('LIMIT_HEARTBEAT_INTERVAL_DASHBOARD', 600); // default = 600
-// define('LIMIT_HEARTBEAT_INTERVAL_EDITOR', 30); // default = 30
-// define('LIMIT_HEARTBEAT_INTERVAL_FRONTEND', 300); // default = 300
 
 /** ********************************************************************************************* */
 /** SlickStack: Maintenance Mode (MU Plugin) Settings ******************************************* */

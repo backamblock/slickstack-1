@@ -7,7 +7,7 @@
 #### path: /var/www/meta/.bashrc ###################################################################
 #### destination: n/a (not a boilerplate) ##########################################################
 #### purpose: Useful bash hacks i.e. SlickStack and WP-CLI aliases and pretty shell prompts ########
-#### module version: Ubuntu 20.04 LTS ##############################################################
+#### module version: Ubuntu 22.04 LTS ##############################################################
 #### sourced by: /home/SUDO_USER/.bashrc, /root/.bashrc ############################################
 #### bash aliases: n/a (ss-install-ubuntu-bash) ####################################################
 ####################################################################################################
@@ -465,6 +465,8 @@ function ss {
         command sudo bash /var/www/ss-optimize-files
     elif [[ $@ == "optimize database" ]]; then
         command sudo bash /var/www/ss-optimize-database
+    elif [[ $@ == "optimize db" ]]; then
+        command sudo bash /var/www/ss-optimize-database
     elif [[ $@ == "optimize files" ]]; then
         command sudo bash /var/www/ss-optimize-files
     elif [[ $@ == "overview" ]]; then
@@ -629,6 +631,12 @@ function ss {
         command sudo bash /var/www/ss-purge-transients
     elif [[ $@ == "purge wordpress transients cache" ]]; then
         command sudo bash /var/www/ss-purge-transients
+    elif [[ $@ == "push dev" ]]; then
+        command sudo bash /var/www/ss-push-dev
+    elif [[ $@ == "push development" ]]; then
+        command sudo bash /var/www/ss-push-development
+    elif [[ $@ == "push staging" ]]; then
+        command sudo bash /var/www/ss-push-staging
     elif [[ $@ == "reboot" ]]; then
         command sudo bash /var/www/ss-reboot-machine
     elif [[ $@ == "remote backup" ]]; then
